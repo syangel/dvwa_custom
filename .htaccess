@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# /myadmin → admin.php
+RewriteRule ^admin/?$ admin.php [L]
