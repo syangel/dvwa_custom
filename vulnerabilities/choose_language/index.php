@@ -7,9 +7,9 @@ dvwaPageStartup( array( 'authenticated' ) );
 
 $page = dvwaPageNewGrab();
 $page[ 'title' ]   =  $page[ 'title_separator' ].$page[ 'title' ];
-$page[ 'page_id' ] = 'xss_d';
-$page[ 'help_button' ]   = 'xss_d';
-$page[ 'source_button' ] = 'xss_d';
+$page[ 'page_id' ] = 'choose_language';
+$page[ 'help_button' ]   = 'choose_language';
+$page[ 'source_button' ] = 'choose_language';
 
 dvwaDatabaseConnect();
 
@@ -29,7 +29,7 @@ switch( dvwaSecurityLevelGet() ) {
 		break;
 }
 
-require_once DVWA_WEB_PAGE_TO_ROOT . "vulnerabilities/xss_d/source/{$vulnerabilityFile}";
+require_once DVWA_WEB_PAGE_TO_ROOT . "vulnerabilities/choose_language/source/{$vulnerabilityFile}";
 
 # For the impossible level, don't decode the querystring
 $decodeURI = "decodeURI";

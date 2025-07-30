@@ -7,9 +7,9 @@ dvwaPageStartup( array( 'authenticated' ) );
 
 $page = dvwaPageNewGrab();
 $page[ 'title' ]   = $page[ 'title_separator' ].$page[ 'title' ];
-$page[ 'page_id' ] = 'exec';
-$page[ 'help_button' ]   = 'exec';
-$page[ 'source_button' ] = 'exec';
+$page[ 'page_id' ] = 'ping';
+$page[ 'help_button' ]   = 'ping';
+$page[ 'source_button' ] = 'ping';
 
 dvwaDatabaseConnect();
 
@@ -29,7 +29,7 @@ switch( dvwaSecurityLevelGet() ) {
 		break;
 }
 
-require_once DVWA_WEB_PAGE_TO_ROOT . "vulnerabilities/exec/source/{$vulnerabilityFile}";
+require_once DVWA_WEB_PAGE_TO_ROOT . "vulnerabilities/ping/source/{$vulnerabilityFile}";
 
 $page[ 'body' ] .= "
 <div class=\"body_padded\">

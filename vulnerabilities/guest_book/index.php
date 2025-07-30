@@ -7,9 +7,9 @@ dvwaPageStartup( array( 'authenticated' ) );
 
 $page = dvwaPageNewGrab();
 $page[ 'title' ]   =  $page[ 'title_separator' ].$page[ 'title' ];
-$page[ 'page_id' ] = 'xss_s';
-$page[ 'help_button' ]   = 'xss_s';
-$page[ 'source_button' ] = 'xss_s';
+$page[ 'page_id' ] = 'guest_book';
+$page[ 'help_button' ]   = 'guest_book';
+$page[ 'source_button' ] = 'guest_book';
 
 dvwaDatabaseConnect();
 
@@ -34,7 +34,7 @@ switch( dvwaSecurityLevelGet() ) {
 		break;
 }
 
-require_once DVWA_WEB_PAGE_TO_ROOT . "vulnerabilities/xss_s/source/{$vulnerabilityFile}";
+require_once DVWA_WEB_PAGE_TO_ROOT . "vulnerabilities/guest_book/source/{$vulnerabilityFile}";
 
 $page[ 'body' ] .= "
 <div class=\"body_padded\">

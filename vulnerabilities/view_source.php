@@ -35,10 +35,10 @@ if (array_key_exists ("id", $_GET) && array_key_exists ("security", $_GET)) {
 		case "upload" :
 			$vuln = 'File Upload';
 			break;
-		case "xss_r" :
+		case "input_name" :
 			$vuln = 'Reflected XSS';
 			break;
-		case "xss_s" :
+		case "guest_book" :
 			$vuln = 'Stored XSS';
 			break;
 		case "weak_id" :
